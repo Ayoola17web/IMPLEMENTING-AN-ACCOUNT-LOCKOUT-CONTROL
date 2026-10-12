@@ -158,4 +158,4 @@ Signed in as a test domain user from the Windows 8 client and entered wrong pass
 
 ## Author
 
-**[Your name]** | [LinkedIn](https://linkedin.com/in/your-profile) | [GitHub](https://github.com/your-username)
+**[Your name]** | [LinkedIn](https://linkedin.com/in/moses-shadrach-b8145a240) | [GitHub](https://github.com/your-username)
