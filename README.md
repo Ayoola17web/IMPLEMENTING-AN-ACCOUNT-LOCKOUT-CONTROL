@@ -77,14 +77,14 @@ Three changes were logged against Active Directory Domain Services before any co
 | CHG-2026-002 | Account lockout duration: 30 minutes | Enforce a standard temporary lockout window |
 | CHG-2026-003 | Reset account lockout counter after: 30 minutes | Align observation window with lockout duration |
 
-![Change record log](images/01-change-record-log.png)
+![Change record log](change-record-log.png)
 *Figure 1 (AM-02): The lockout configuration is implemented through the approved change-management process, with each change recorded before implementation.*
 
 ## Step 3: Create and Link the GPO
 
 Created a GPO named **ACCOUNT LOCKOUT POLICY** in Elixtech.com and linked it to the Finance OU.
 
-![GPO linked to the Finance OU](images/02-gpo-linked-finance-ou.png)
+![GPO linked to the Finance OU](02-gpo-linked-finance-ou.png)
 *Figure 2 (AM-01): The control is configured through Group Policy so in-scope user accounts are covered.*
 
 ## Step 4: Configure the Lockout Threshold
@@ -93,7 +93,7 @@ Path: `Computer Configuration > Policies > Windows Settings > Security Settings 
 
 Enabled **Define this policy setting** and set the threshold to **5 invalid logon attempts**.
 
-![Account lockout threshold set to 5](images/03-lockout-threshold-5.png)
+![Account lockout threshold set to 5](03-lockout-threshold-5.png)
 *Figure 3 (AM-01): In-scope user accounts lock after five (5) consecutive failed login attempts.*
 
 ## Step 5: Verify All Three Settings
@@ -104,21 +104,21 @@ Enabled **Define this policy setting** and set the threshold to **5 invalid logo
 | Account lockout threshold | 5 invalid logon attempts | CHG-2026-001 |
 | Reset account lockout counter after | 30 minutes | CHG-2026-003 |
 
-![All three lockout settings](images/04-lockout-settings-summary.png)
+![All three lockout settings](04-lockout-settings-summary.png)
 *Figure 4 (AM-01, AM-02): Threshold of 5, lockout duration of 30 minutes and reset counter of 30 minutes, each traced to a change record.*
 
 ## Step 6: Check Scope and Security Filtering
 
 The GPO is linked at the domain level (**Elixtech.com, Enforced: Yes**) and to the Finance OU. Security filtering lists Authenticated Users and one test user.
 
-![GPO scope and security filtering](images/05-gpo-scope-and-filtering.png)
+![GPO scope and security filtering](05-gpo-scope-and-filtering.png)
 *Figure 5 (AM-02, AM-06): Systems affected are documented. Any account that must be treated differently needs a documented exception.*
 
 ## Step 7: Test the Control
 
 Signed in as a test domain user from the Windows 8 client and entered wrong passwords repeatedly. Windows reported that the account is locked out, confirming the control is enforced.
 
-![Test account locked out](images/06-account-locked-out.png)
+![Test account locked out](06-account-locked-out.png)
 *Figure 6 (AM-03): Control tested in an authorized test account. Evidence shows the account is locked out.*
 
 ## Step 8: Review Events and Close Out
