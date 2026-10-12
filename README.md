@@ -20,7 +20,7 @@ I came across a **Cybersecurity Analyst** job description online (a junior, full
 
 > *"Implement, operate, and document security controls under approved firm policies, standards, procedures, and change-management requirements."*
 
-![Job description duty that inspired this project](images/00-job-description-duty.png)
+![Job description duty that inspired this project](00-job-description-duty-captioned.png)
 *Figure 0: The job duty that inspired this project: implement, operate and document security controls under approved policies and change management.*
 
 Instead of just reading it, I decided to **prove I can do that exact duty** with a real, end-to-end lab.
